@@ -27,8 +27,8 @@ const TextForm = (props) => {
             
         <textarea className="form-control" onChange={handleOnChange} value={text} id="myBox" rows="7" style={{backgroundColor:props.mode==='light'?'white':'#212529',color:props.mode==='light'?'black':'white'}}></textarea>
         </div>
-        <button className="btn btn-primary mx-2" onClick={handleUpClick}>Convert To UpperCase</button>
-        <button className="btn btn-primary mx-2" onClick={handleLowClick}>Convert To LowerCase</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-2" onClick={handleUpClick}>Convert To UpperCase</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-2" onClick={handleLowClick}>Convert To LowerCase</button>
     </div>
     <div className="container my-3" style={{color:props.mode==='light'?'black':'white'}}>
     <h2>Your Text Summary </h2>
